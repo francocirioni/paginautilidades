@@ -24,19 +24,12 @@ body {
     color: black;   
     }
 
-
-
-
-
-
-
-
-
 .card div {
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     backface-visibility: hidden;
@@ -67,4 +60,10 @@ body {
 .card div h1 {
     font-size: 100px;
     color: #f1f1f1;
+}
+
+
+
+.imagen{
+    width: 100%;
 }
