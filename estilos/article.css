@@ -1,0 +1,36 @@
+body{background: black;}
+
+
+
+article{
+
+    width: 100%;
+    
+    border: 1px solid black;
+
+    
+
+}
+
+.contenedor{
+
+    
+ 
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 25rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+    grid-auto-flow: dense;
+    
+ 
+}
+
+.card{
+    overflow: hidden;
+    padding: 1rem;
+    background-color: bisque;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem gray;
+    color: black;
+    border: 1px solid black;
+}
