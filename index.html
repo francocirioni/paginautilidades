@@ -1,29 +1,78 @@
 <!DOCTYPE html>
-<html lang="sp">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flip Card</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="cartas.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-<div class="contenedor">
-  <div class="card">
-    <div class="frontbotton"></div>
-  </div>
-</div>
 
+
+
+    <div class="contenedor">
+
+       
+    </div>
 
 
   
+
+
+
+
+
 </body>
 
 </html>
 
+<script>
+
+// Obtener el JSON desde la URL
+fetch('https://my-json-server.typicode.com/francocirioni/jsonutilidad/db')
+  .then(response => response.json())
+  .then(data => {
+    // Obtener el array de programas del JSON
+    const programas = data.programas;
+
+    // Recorrer cada programa y crear un <div> separado para cada uno
+    programas.forEach(programa => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const front = document.createElement('div');
+      front.className = 'front';
+      front.innerHTML = `
+        <img src="${programa.icono}" alt="Icono del programa">
+        <h3>${programa.nombre}</h3>
+        <p>Versión: ${programa.version}</p>
+      `;
+
+      const back = document.createElement('div');
+      back.className = 'back';
+      back.innerHTML = `
+        <p>Descripción: ${programa.descripcion}</p>
+        <p>Otro dato: ${programa.otro}</p>
+        <a href="${programa.url}" target="_blank">Enlace</a>
+      `;
+
+      card.appendChild(front);
+      card.appendChild(back);
+
+      // Agregar el <div> card al contenedor
+      const contenedor = document.querySelector('.contenedor');
+      contenedor.appendChild(card);
+    });
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
 
 
+</script>
