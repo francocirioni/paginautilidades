@@ -16,24 +16,22 @@ fetch('https://my-json-server.typicode.com/francocirioni/jsonutilidad/db')
       const agregarDatos = (elemento, id) => {
         const span = document.createElement('span');
         span.classList.add('datos');
-        span.textContent = programa[id];
+
+        if (id === 'icono') {
+          const img = document.createElement('img');
+          img.src = programa[id];
+          img.classList.add('icono');
+          span.appendChild(img);
+        } else {
+          span.textContent = programa[id];
+        }
+
         elemento.appendChild(span);
       };
 
-      // Agregar imagen como atributo src en lugar de un span de texto
-      const agregarImagen = (elemento, id) => {
-        const img = document.createElement('img');
-        img.classList.add('imagen');
-        img.src = programa[id];
-        elemento.appendChild(img);
-      };
-
-      ['nombre', 'version', 'fondo'].forEach(id =>
+      ['nombre', 'version', 'fondo', 'icono'].forEach(id =>
         agregarDatos(frontDiv, id)
       );
-
-      // Agregar imagen en lugar de un span de texto
-      agregarImagen(frontDiv, 'icono');
 
       ['descripcion', 'url', 'otro'].forEach(id => agregarDatos(backDiv, id));
 
