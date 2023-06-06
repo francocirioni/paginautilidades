@@ -40,7 +40,10 @@ body {
     background: #288ca0;
     transform: perspective(500px) rotateY(0deg);
 }
-
+.card .frontbotton {
+    background: #288ca0;
+  
+}
 .card .back {
     background: #682fc4;
     transform: perspective(500px) rotateY(180deg);
