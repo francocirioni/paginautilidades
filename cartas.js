@@ -16,6 +16,7 @@ fetch('https://my-json-server.typicode.com/francocirioni/jsonutilidad/db')
       const agregarDatos = (elemento, id) => {
         const span = document.createElement('span');
         span.classList.add('datos');
+        span.classList.add(id); // Agregar clase con el mismo nombre que el id
 
         if (id === 'icono') {
           const img = document.createElement('img');
@@ -29,7 +30,7 @@ fetch('https://my-json-server.typicode.com/francocirioni/jsonutilidad/db')
         elemento.appendChild(span);
       };
 
-      ['nombre', 'version', 'fondo', 'icono'].forEach(id =>
+      ['icono', 'nombre', 'version'].forEach(id =>
         agregarDatos(frontDiv, id)
       );
 
