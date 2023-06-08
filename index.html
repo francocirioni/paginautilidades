@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 
 <head>
 
@@ -13,37 +13,42 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
 </head>
 
 <body>
 
 
 
-  <div class="contenedor">
+  <div class="contenedor" id="app">
 
-    <div class="card">
+    <div class="card" v-for="producto in productos" :key="producto.nombre">
 
       <div class="front">
 
-        <span class="vacio"></span>
+        <span class="vacio">  </span>
         <span class="contendoricono">
 
           <span class="icono">
 
-            <img src="imagenes/brave_browser_logo_icon_153013.png" alt="">
+            <img :src="producto.icono" alt="">
 
           </span>
         </span>
 
         <span class="nombre">
-          <p>nombre</p>
+          <p> {{ producto.nombre }}</p>
         </span>
         <span class="version">
-          <p>version</p>
+          <p> {{ producto.version }}</p>
         </span>
 
       </div>
+
+
+      
 
       <div class="back">
 
@@ -63,9 +68,26 @@
 
         </span>
 
-        <span class="descripcion"></span>
+        <span class="descripcion">
+          {{ producto.descripcion }}
+        </span>
 
-        <span class="contenedorboton"><button class="linkboton">link</button></span>
+        <span class="contenedorboton">
+
+
+          <a class="linkboton" v-bind:href="producto.url"><button class="lin">URL</button></span></a>
+
+
+          
+
+
+        <!--
+        <a class="linkboton" v-bind:href="producto.url" target="_blank">
+          <button class="linkboton">Ir a la URL</button>
+        </a>-->
+        
+        
+
 
 
       </div>
@@ -96,7 +118,7 @@
          
         </span>
 
-        <span class="nombre">
+        <span class="nombre"> 
           <p></p>
         </span>
         <span class="version">
@@ -106,6 +128,7 @@
       </div>
 
 
+     
 
 
 
@@ -136,5 +159,30 @@
 
 
 </body>
+
+
+
+
+
+
+<script>
+  new Vue({
+      el: '#app',
+      data: {
+          productos: []
+      },
+      mounted() {
+          axios.get('https://misutilidades-a9f69-default-rtdb.firebaseio.com/productos.json')
+              .then(response => {
+                  this.productos = Object.values(response.data);
+              })
+              .catch(error => {
+                  console.error(error);
+              });
+      }
+  });
+</script>
+
+
 
 </html>
