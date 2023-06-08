@@ -1,0 +1,34 @@
+{
+  "programas": [
+    {
+      
+      "icono": "https://i.postimg.cc/W3HNjbhD/application-software-win-windows-windows8-1867.png",
+      "nombre": "1casd",      
+      "version": "1.0",
+      "fondo": "asdasda",
+      "descripcion": "Descripción del producto",
+      "url": "https://ejemplo.com",
+      "otro": "Otro dato"
+    },
+    {
+      "icono": "https://i.postimg.cc/633WDG5J/brave-browser-logo-icon-153013.png",
+      "nombre": "2",      
+      "version": "1.0",
+      "fondo": "fondo.png",
+      "descripcion": "Descripción del producto",
+      "url": "https://ejemplo.com",
+      "otro": "Otro dato"
+    },
+    {
+
+
+        "icono": "icono.png",
+      "nombre": "3",    
+      "version": "1.0",
+      "fondo": "fondo.png",
+      "descripcion": "Descripción del producto",
+      "url": "https://ejemplo.com",
+      "otro": "Otro dato"
+    }
+  ]
+}

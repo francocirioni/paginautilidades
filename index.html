@@ -3,11 +3,16 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documenst</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 
@@ -15,12 +20,10 @@
 
 
 
-    <div class="contenedor">
-
-       
-    </div>
+  <div class="contenedor">
 
 
+  </div>
   
 
 
@@ -31,48 +34,68 @@
 
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 
-// Obtener el JSON desde la URL
-fetch('https://my-json-server.typicode.com/francocirioni/jsonutilidad/db')
-  .then(response => response.json())
-  .then(data => {
-    // Obtener el array de programas del JSON
-    const programas = data.programas;
+  // Obtener el JSON desde la URL
+  fetch('https://my-json-server.typicode.com/francocirioni/jsonutilidad/db')
+    .then(response => response.json())
+    .then(data => {
+      // Obtener el array de programas del JSON
+      const programas = data.programas;
 
-    // Recorrer cada programa y crear un <div> separado para cada uno
-    programas.forEach(programa => {
-      const card = document.createElement('div');
-      card.className = 'card';
+      // Recorrer cada programa y crear un <div> separado para cada uno
+      programas.forEach(programa => {
+        const card = document.createElement('div');
+        card.className = 'card';
 
-      const front = document.createElement('div');
-      front.className = 'front';
-      front.innerHTML = `
-        <img src="${programa.icono}" alt="Icono del programa">
+        const front = document.createElement('div');
+        front.className = 'front';
+        front.innerHTML = `
+        <img class= "icono" src="${programa.icono}" alt="Icono del programa">
         <h3>${programa.nombre}</h3>
         <p>Versión: ${programa.version}</p>
       `;
 
-      const back = document.createElement('div');
-      back.className = 'back';
-      back.innerHTML = `
+        const back = document.createElement('div');
+        back.className = 'back';
+        back.innerHTML = `
         <p>Descripción: ${programa.descripcion}</p>
         <p>Otro dato: ${programa.otro}</p>
         <a href="${programa.url}" target="_blank">Enlace</a>
       `;
 
-      card.appendChild(front);
-      card.appendChild(back);
+        card.appendChild(front);
+        card.appendChild(back);
 
-      // Agregar el <div> card al contenedor
-      const contenedor = document.querySelector('.contenedor');
-      contenedor.appendChild(card);
+        // Agregar el <div> card al contenedor
+        const contenedor = document.querySelector('.contenedor');
+        contenedor.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error('Error:', error);
     });
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+
 
 
 
 </script>
+
+
+
