@@ -42,6 +42,14 @@ body {
     transform: perspective(500px) rotateY(0deg);
 }
 
+.card .frontb {
+    background-color: #B9D7EA;
+
+}
+
+
+
+
 .card .back {
     background: #D6E6F2;
     transform: perspective(500px) rotateY(180deg);
@@ -88,6 +96,23 @@ body {
 
 
 }
+
+.iconob{
+    width: 10rem;
+    background-color: rgba(0, 0, 0, 0.144);
+    border: 5px solid #D6E6F2;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.iconob:hover{
+    background: #769FCD;
+}
+
 
 .nombre {
     color: red
@@ -200,3 +225,22 @@ width: 50%;}
     background: #769FCD;
 
 }
+
+.contedorblanco{height: 50%;}
+
+.contendoriconosuma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B9D7EA;
+    border: 1px solid red;
+    
+}
+
+.buttonb{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.suma{margin: 4%;}
