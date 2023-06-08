@@ -4,25 +4,26 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 body {
-    background: #769FCD; 
+    background: #769FCD;
 }
 
-.contenedor{  
+.contenedor {
     display: grid;
     gap: 1rem;
     grid-auto-rows: 25rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
-    grid-auto-flow: dense;    
- 
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-auto-flow: dense;
+
 }
 
 .card {
     position: relative;
-    overflow: hidden;    
-    border-radius: 0.3rem;  
-    color: black;   
-    }
+    overflow: hidden;
+    border-radius: 0.3rem;
+    color: black;
+}
 
 .card div {
     position: absolute;
@@ -33,11 +34,11 @@ body {
     align-items: center;
 
     backface-visibility: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .card .front {
-    background-color: #B9D7EA;    
+    background-color: #B9D7EA;
     transform: perspective(500px) rotateY(0deg);
 }
 
@@ -48,12 +49,12 @@ body {
 
 
 .card:hover .front {
-   
+
     transform: perspective(500px) rotateY(180deg);
 }
 
 .card:hover .back {
-   
+
     transform: perspective(500px) rotateY(360deg);
 }
 
@@ -61,19 +62,22 @@ body {
 
 
 
-.contendoricono{
-    border: 1px solid black;
+
+
+
+.contendoricono {
+
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50%;
- 
-   
+
+
 }
 
 
-.icono{
+.icono {
     width: 10rem;
     background-color: rgba(0, 0, 0, 0.144);
     border: 5px solid #D6E6F2;
@@ -82,48 +86,117 @@ body {
     justify-content: center;
     align-items: center;
 
-  
+
 }
 
-.nombre{color: red}
+.nombre {
+    color: red
+}
 
-.barraback{
-    border: 1px solid black;
+.barraback {
+
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     width: 100%;
     height: 20%;
 
 }
 
-.icono2{
-    width: 40px;
-    height: 40px;
+.icono2 {
+
+    height: 60%;
+    margin-left: 5%;
+
 }
-.nombre2{
+
+.nombre2 {
     font-size: 30px;
 }
-.descripcion{
-    border: 1px solid black;
+
+.descripcion {
+  
     height: 50%;
     width: 100%;
 }
 
-.boton{
+.contenedorboton {
 
     width: 100%;
-    border: 1px solid black;
+
     height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
-.vacio{
+
+
+
+.contenedorbotones{
+
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: right ;
+    border: transparent;
+
+
+
+
+
+}
+
+
+
+.botones {
+    
+    height: 50%;
+    width: 25%;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+   
+    margin-right: 8%;
+
+}
+
+.botones:hover {
+    background: #769FCD;
+
+}
+
+.imagenboton{
+width: 50%;}
+
+
+
+
+
+
+
+.vacio {
     height: 20%;
 }
 
-.nombre{height: 20%;}
+.nombre {
+    height: 20%;
+}
 
-.version{height: 10%;}
+.version {
+    height: 10%;
+}
+
+.linkboton{
+
+    width: 90%;
+    padding: 5%;
+    background-color: #B9D7EA;
+}
+
+.linkboton:hover {
+    background: #769FCD;
+
+}
