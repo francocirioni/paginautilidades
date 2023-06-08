@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
     backface-visibility: hidden;
     transition: 0.5s;
 }
@@ -57,22 +57,73 @@ body {
     transform: perspective(500px) rotateY(360deg);
 }
 
-.card div h1 {
-    font-size: 100px;
-    color: #f1f1f1;
-}
 
 
 
-.imagen{
+
+.contendoricono{
+    border: 1px solid black;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+ 
+   
 }
+
 
 .icono{
     width: 10rem;
     background-color: rgba(0, 0, 0, 0.144);
     border: 5px solid #D6E6F2;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
 }
 
 .nombre{color: red}
+
+.barraback{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    height: 20%;
+
+}
+
+.icono2{
+    width: 40px;
+    height: 40px;
+}
+.nombre2{
+    font-size: 30px;
+}
+.descripcion{
+    border: 1px solid black;
+    height: 50%;
+    width: 100%;
+}
+
+.boton{
+
+    width: 100%;
+    border: 1px solid black;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.vacio{
+    height: 20%;
+}
+
+.nombre{height: 20%;}
+
+.version{height: 10%;}
