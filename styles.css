@@ -254,7 +254,9 @@ border: none;}
 
 
 
-
+#myModal {
+    display: none;
+  }
 
 
 
@@ -294,4 +296,3 @@ border: none;}
     text-decoration: none;
     cursor: pointer;
   }
-  
