@@ -2,7 +2,6 @@
 <html lang="sp">
 
 <head>
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,82 +14,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-
+ 
 </head>
 
 <body>
-
-
-
-
-
-
 
   <div class="contenedor" id="app">
 
     <div class="card" v-for="producto in productos" :key="producto.nombre">
 
       <div class="front">
-
         <span class="vacio"> </span>
         <span class="contendoricono">
-
           <span class="icono">
-
             <img :src="producto.icono" alt="">
-
           </span>
         </span>
-
         <span class="nombre">
           <p> {{ producto.nombre }}</p>
         </span>
         <span class="version">
           <p> {{ producto.version }}</p>
         </span>
-
       </div>
 
 
 
 
       <div class="back">
-
         <span class="barraback">
-
-
           <img class="icono2" :src="producto.icono" alt="">
-
           <span class="contenedorbotones">
-
             <button class="botones"><img class="imagenboton" src="imagenes/lapiz.png" alt=""></button>
             <button class="botones" @click="eliminarProducto(producto.nombre)">
               <img class="imagenboton" src="imagenes/eliminar.png" alt="">
             </button>
-
           </span>
 
 
 
         </span>
-
         <span class="descripcion">
           {{ producto.descripcion }}
         </span>
-
         <span class="contenedorboton">
-
-
           <a class="linkboton" v-bind:href="producto.url"><button class="lin">URL</button></span></a>
-
-
-
-
-
-
-
-
       </div>
 
 
@@ -100,7 +68,6 @@
 
 
     </div>
-
     <div class="card">
 
       <div class="frontb">
@@ -146,20 +113,20 @@
 
                 </div>
               </div>
-            <span>
+              <span>
 
 
 
 
 
-        </span>
+              </span>
 
-        <span class="nombre">
-          <p></p>
-        </span>
-        <span class="version">
-          <p></p>
-        </span>
+              <span class="nombre">
+                <p></p>
+              </span>
+              <span class="version">
+                <p></p>
+              </span>
 
       </div>
 
@@ -172,188 +139,25 @@
 
 
     </div>
-
-
-
-
-
-
-
-
-
   </div>
-
-
-
-
-
-
-
   </div>
-
-
-
-
-
 
 </body>
 
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      productos: []
-    },
-    mounted() {
-      this.obtenerProductos();
-    },
-    methods: {
-      obtenerProductos() {
-        axios.get('https://misutilidades-a9f69-default-rtdb.firebaseio.com/productos.json')
-          .then(response => {
-            this.productos = Object.values(response.data);
-          })
-          .catch(error => {
-            console.error(error);
-          });
-      },
-      eliminarProducto(nombre) {
-        const index = this.productos.findIndex(producto => producto.nombre === nombre);
-        if (index !== -1) {
-          this.productos.splice(index, 1); // Eliminar el producto de la lista local
-
-          axios.put('https://misutilidades-a9f69-default-rtdb.firebaseio.com/productos.json', this.productos)
-            .then(response => {
-              console.log('Producto eliminado de la base de datos');
-            })
-            .catch(error => {
-              console.error(error);
-            });
-        }
-      },
-
-
-      crearProducto() {
-        const nombre = document.getElementById('nombre').value;
-        const version = document.getElementById('version').value;
-        const descripcion = document.getElementById('descripcion').value;
-        const icono = document.getElementById('icono').value;
-        const url = document.getElementById('url').value;
-
-        if (nombre && version && descripcion && icono && url) {
-          const nuevoProducto = {
-            nombre: nombre,
-            version: version,
-            descripcion: descripcion,
-            icono: icono,
-            url: url
-          };
-
-          this.productos.push(nuevoProducto); // Agregar el nuevo producto a la lista local
-
-          axios.put('https://misutilidades-a9f69-default-rtdb.firebaseio.com/productos.json', this.productos)
-            .then(response => {
-              console.log('Nuevo producto creado y guardado en la base de datos');
-            })
-            .catch(error => {
-              console.error(error);
-            });
-        } else {
-          console.log('Por favor, complete todos los campos');
-        }
-      }
-
-
-    }
-
-
-
-  });
 
 
 
 
-  document.getElementById('formulario').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evitar que el formulario se envíe automáticamente
-
-    const nombre = document.getElementById('nombre').value;
-    const version = document.getElementById('version').value;
-    const descripcion = document.getElementById('descripcion').value;
-    const icono = document.getElementById('icono').value;
-    const url = document.getElementById('url').value;
-
-    if (nombre && version && descripcion && icono && url) {
-      const nuevoProducto = {
-        nombre: nombre,
-        version: version,
-        descripcion: descripcion,
-        icono: icono,
-        url: url
-      };
-
-      this.productos.push(nuevoProducto); // Agregar el nuevo producto a la lista local
-
-      axios.put('https://misutilidades-a9f69-default-rtdb.firebaseio.com/productos.json', this.productos)
-        .then(response => {
-          console.log('Nuevo producto creado y guardado en la base de datos');
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    } else {
-      console.log('Por favor, complete todos los campos');
-    }
-  });
-</script>
 
 
 
-
-<script>
-
-
-  // Obtener el modal
-  var modal = document.getElementById("myModal");
-
-  // Obtener el botón que abre el modal
-  var btn = document.getElementById("openModal");
-
-  // Obtener el elemento <span> que cierra el modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // Cuando se haga clic en el botón, abrir el modal
-  btn.onclick = function () {
-    modal.style.display = "block";
-  }
-
-  // Cuando se haga clic en <span> (x), cerrar el modal
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-
-  // Cuando el usuario haga clic fuera del modal, cerrarlo
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-  // Obtener el formulario
-  var form = document.getElementById("myForm");
-
-  // Escuchar el evento de envío del formulario
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evitar el envío del formulario
-
-    // Aquí puedes hacer algo con los valores del formulario, como enviarlos a un servidor o procesarlos en JavaScript
-
-    // Cerrar el modal después de enviar el formulario
-    modal.style.display = "none";
-  });
-
-</script>
 
 
 
 
 </html>
+
+
+
+<script src="vue.js"></script>
+<script src="modal.js"></script>
