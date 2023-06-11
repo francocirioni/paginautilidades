@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+ 
 }
 
 body {
@@ -48,7 +49,9 @@ body {
 }
 
 
-
+#formulario{
+    margin-top: 5%;
+}
 
 .card .back {
     background: #D6E6F2;
@@ -115,7 +118,8 @@ body {
 
 
 .nombre {
-    color: red
+    color: red;
+    font-weight: bold;
 }
 
 .barraback {
@@ -141,15 +145,21 @@ body {
 
 .descripcion {
   
-    height: 50%;
-    width: 100%;
+    height: 60%;   
+    border: 2px solid#85b4eb;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
 }
+
 
 .contenedorboton {
 
     width: 100%;
-
-    height: 30%;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,11 +268,6 @@ border: none;}
     display: none;
   }
 
-
-
-
-
-
 .modal {
     display: none;
     position: fixed;
@@ -273,11 +278,11 @@ border: none;}
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+ 
   }
   
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -287,12 +292,26 @@ border: none;}
     color: #aaa;
     float: right;
     font-size: 28px;
+    margin-top: 15%;  
+    margin-bottom: 3%;
     font-weight: bold;
   }
   
   .close:hover,
+  
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
+
+  .botoncrear{
+    margin-top: 5%;
+    padding: 4px;
+    
+  }
+
+
+
+
+
