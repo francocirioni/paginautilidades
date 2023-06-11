@@ -1,7 +1,3 @@
-
-
-
-
   // Obtener el modal
   var modal = document.getElementById("myModal");
   // Obtener el botón que abre el modal
