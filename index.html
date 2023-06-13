@@ -14,8 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" href="modalcrear.css">
-  <link rel="stylesheet" href="modalmodificar.css">
+  
 
 </head>
 
@@ -25,7 +24,6 @@
 
     <div class="card" v-for="producto in productos" :key="producto.nombre">
 
-      <!--FRONT DE TARJETA-->
       <div class="front">
         <span class="vacio"> </span>
         <span class="contendoricono">
@@ -43,52 +41,47 @@
 
 
 
-      <!--BACK DE TARJETA-->
 
       <div class="back">
 
         <span class="barraback">
           <img class="icono2" :src="producto.icono" alt="">
-          <span class="contenedorbotones">
+       <span class="contenedorbotones">
             <button class="botones"><img class="imagenboton" src="imagenes/lapiz.png" id="openModaleditar"></button>
-
-            <button class="botones" @click="eliminarProducto(producto.nombre)">
-              <img class="imagenboton" src="imagenes/eliminar.png" alt="">
-            </button>
-          </span>
+     
+          <button class="botones" @click="eliminarProducto(producto.nombre)">
+            <img class="imagenboton" src="imagenes/eliminar.png" alt="">
+          </button>
+        </span>
 
         </span>
         <span class="descripcion">
           {{ producto.descripcion }}
 
-          <span>
-            <form id="formulariomodificar" @submit="modificarprograma">
 
-              <label for="nombre">Nombre del programa:</label>
-              <input type="text" id="nombremodificar" name="nombremodificar"><br>
 
-              <label for="version">Versión del programa:</label>
-              <input type="text" id="versionmodificar" name="versionmodificar"><br>
 
-              <label for="descripcion">Descripción del programa:</label>
-              <input type="text" id="descripcionmodificar" name="descripcionmodificar"><br>
 
-              <label for="icono">Ruta al icono del programa:</label>
-              <input type="text" id="iconomodificar" name="iconomodificar"><br>
 
-              <label for="url">URL del programa:</label>
-              <input type="text" id="urlmodificar" name="urlmodificar"><br>
 
-              <input class="botonmodificar" type="submit" value="modificarprog">
-            </form>
-          </span>
+
+
+
+
+
+
+
+
+
+
 
 
         </span>
+
+
 
         <span class="contenedorboton">
-          <a class="linkboton" v-bind:href="producto.url"></a><button class="lin">URL</button>
-        </span>
+          <a class="linkboton" v-bind:href="producto.url"><button class="lin">URL</button></span></a>
       </div>
 
 
@@ -98,10 +91,6 @@
 
 
     </div>
-
-
-
-    <!-- BOTON CREAR NUEVO PROGRAMA-->
     <div class="card">
 
       <div class="frontb">
@@ -148,7 +137,20 @@
                 </div>
               </div>
               <span>
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
+
     </div>
   </div>
   </div>
@@ -171,4 +173,27 @@
 
 
 <script src="vue.js"></script>
-<script src="modalcrear.js"></script>
+<script src="modal.js"></script>
+
+
+
+
+<script>
+  document.getElementById("openModaleditar").addEventListener("click", function () {
+    document.getElementById("modaleditar").style.display = "block";
+  });
+
+  document.getElementsByClassName("closeeditar")[0].addEventListener("click", function () {
+    document.getElementById("modaleditar").style.display = "none";
+  });
+
+  document.getElementById("myFormeditar").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var name = document.getElementById("modalNameeditar").value;
+    var email = document.getElementById("modalEmaileditar").value;
+    console.log("Nombreeditar: " + name);
+    console.log("Emaileditar: " + email);
+    document.getElementById("modaleditar").style.display = "none";
+  });
+
+</script>
