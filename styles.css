@@ -69,13 +69,6 @@ body {
     transform: perspective(500px) rotateY(360deg);
 }
 
-
-
-
-
-
-
-
 .contendoricono {
 
     width: 100%;
@@ -83,10 +76,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 50%;
-
-
 }
-
 
 .icono {
     width: 10rem;
@@ -96,8 +86,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .iconob{
@@ -107,8 +95,7 @@ body {
     border-radius: 1rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 
 }
 
@@ -157,7 +144,6 @@ body {
 
 
 .contenedorboton {
-
     width: 100%;
     height: 20%;
     display: flex;
@@ -169,18 +155,12 @@ body {
 
 
 .contenedorbotones{
-
     height: 100%;
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: right ;
     border: transparent;
-
-
-
-
-
 }
 
 
@@ -197,20 +177,11 @@ body {
     margin-right: 8%;
 
 }
-
 .botones:hover {
     background: #769FCD;
-
 }
-
 .imagenboton{
 width: 50%;}
-
-
-
-
-
-
 
 .vacio {
     height: 20%;
@@ -264,52 +235,7 @@ border: none;}
 
 
 
-#myModal {
-    display: none;
-  }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
- 
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    margin-top: 15%;  
-    margin-bottom: 3%;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .botoncrear{
-    margin-top: 5%;
-    padding: 4px;
-    
-  }
 
 
 
