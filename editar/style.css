@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+ 
+}
+
+body {
+    background: #769FCD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
