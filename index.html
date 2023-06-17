@@ -44,6 +44,32 @@
 
       <div class="back">
 
+        <span class="form">
+
+          <formulario>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="version">Versión:</label>
+            <input type="text" id="version" name="version" required>
+            
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+            
+            <label for="icono">Ruta del icono:</label>
+            <input type="text" id="icono" name="icono" required>
+            
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required>
+            
+            <button type="submit">Enviar</button>
+    
+          </formulario>
+
+
+        </span>
+
         <span class="barraback">
           <img class="icono2" :src="producto.icono" alt="">
        <span class="contenedorbotones">
