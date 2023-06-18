@@ -25,3 +25,19 @@
   });
 
 
+  document.getElementById("openModaleditar").addEventListener("click", function () {
+    document.getElementById("modaleditar").style.display = "block";
+  });
+
+  document.getElementsByClassName("closeeditar")[0].addEventListener("click", function () {
+    document.getElementById("modaleditar").style.display = "none";
+  });
+
+  document.getElementById("myFormeditar").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var name = document.getElementById("modalNameeditar").value;
+    var email = document.getElementById("modalEmaileditar").value;
+    console.log("Nombreeditar: " + name);
+    console.log("Emaileditar: " + email);
+    document.getElementById("modaleditar").style.display = "none";
+  });
