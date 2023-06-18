@@ -47,8 +47,12 @@
         <span class="barraback">
           <img class="icono2" :src="producto.icono" alt="">
           <span class="contenedorbotones">
-            <button class="botones" onclick="mostrarFormulario()"><img class="imagenboton"
-                src="imagenes/lapiz.png"></button>
+            <button class="botones" >
+
+                <a class="botones" href="EditarPrograma/editar.html">
+                  <img class="imagenboton" src="imagenes/lapiz.png">
+                </a></button>
+                
 
             <button class="botones" @click="eliminarProducto(producto.nombre)">
               <img class="imagenboton" src="imagenes/eliminar.png" alt="">
