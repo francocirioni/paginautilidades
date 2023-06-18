@@ -57,15 +57,9 @@
 
         </span>
         <span class="descripcion">
-          {{ producto.descripcion }}  
+          {{ producto.descripcion }}     
           
-          
-
-
         </span>
-
-
-
         <span class="contenedorboton">
           <a class="linkboton" v-bind:href="producto.url"><button class="lin">URL</button></span></a>
       </div>
@@ -73,81 +67,12 @@
 
     </div>
 
+  </div>
 
-
-    <div class="card">
-
-      <div class="frontb">
-
-        <span class="vacio"></span>
-        <span class="contendoricono">
-
-          <button class="buttonb">
-
-            <span class="iconob">
-              <img class="suma" src="imagenes/suma.png" alt="" id="openModal">
-            </span>
-
-
-            <span class="popup">
-
-              <div id="myModal" class="modal">
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <h2>Programa</h2>
-
-                  <form id="formulario" @submit="crearProducto">
-
-                    <label for="nombre">Nombre del programa:</label>
-                    <input type="text" id="nombre" name="nombre"><br>
-
-                    <label for="version">Versión del programa:</label>
-                    <input type="text" id="version" name="version"><br>
-
-                    <label for="descripcion">Descripción del programa:</label>
-                    <input id="descripcion" name="descripcion"><br>
-
-                    <label for="icono">Ruta al icono del programa:</label>
-                    <input type="text" id="icono" name="icono"><br>
-
-                    <label for="url">URL del programa:</label>
-                    <input type="text" id="url" name="url"><br>
-
-                    <input class="botoncrear" type="submit" value="Crear producto">
-                  </form>
-
-
-
-                </div>
-              </div>
-              <span>
-
-
-
-
-      </div>
-
-      
-  
-
-  
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
+  <div class="crearnuevo">
+    <a class="imagendesuma" href="Nuevoprograma/nuevo.html">
+      <img src="imagenes/suma.png" alt="">
+    </a>
   </div>
 
 
@@ -160,7 +85,7 @@
 
 
 <script src="vue.js"></script>
-<script src="modal.js"></script>
+
 
 
 
