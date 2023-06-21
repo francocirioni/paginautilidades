@@ -10,7 +10,7 @@ new Vue({
   methods: {
 
     obtenerProductos() {
-      axios.get('http://francocir.pythonanywhere.com/productos')
+      axios.get('https://francocir.pythonanywhere.com/productos')
         .then(response => {
           this.productos = Object.values(response.data);
         })
@@ -27,7 +27,7 @@ new Vue({
         this.productos.splice(index, 1);
     }
 
-        axios.put('http://francocir.pythonanywhere.com/productos', this.productos)
+        axios.put('https://francocir.pythonanywhere.com/productos', this.productos)
           .then(response => {
             console.log('Producto eliminado de la base de datos');
           })
