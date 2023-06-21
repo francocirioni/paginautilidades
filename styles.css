@@ -280,7 +280,7 @@ body {
     z-index: 9998;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    border-radius: 50%;
+    border-radius: 1rem;
 }
 .imagendesuma {
     display: flex;
