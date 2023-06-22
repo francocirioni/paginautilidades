@@ -37,7 +37,7 @@
           <p> {{ producto.nombre }}</p>
         </span>
         <span class="version">
-          <p> {{ producto.version }}</p>
+          <p> {{ producto.version }} <span style="display: none;">{{ producto.id }} </span></p>
         </span>
       </div>
 
@@ -54,9 +54,11 @@
                 </a></button>
                 
 
-            <button class="botones" @click="eliminarProducto(producto.nombre)">
-              <img class="imagenboton" src="imagenes/eliminar.png" alt="">
-            </button>
+ 
+<button class="botones" @click="eliminarProducto(producto.id)">
+  <img class="imagenboton" src="imagenes/eliminar.png" alt="">
+</button>
+
           </span>
 
         </span>

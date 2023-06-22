@@ -19,18 +19,26 @@ new Vue({
         });
     },
 
-    eliminarProducto(nombre) {
-
-      const index = this.productos.findIndex(producto => producto.nombre === nombre);
-
-      if (index !== -1) {
-        this.productos.splice(index, 1);
+    eliminarProducto(id) {
+      const url = 'https://francocir.pythonanywhere.com/productos/' + id;
+      var options = {
+        method: 'DELETE',
+      };
+    
+      fetch(url, options)
+        .then(res => res.text()) // o res.json()
+        .then(res => {
+          console.log('Producto eliminado de la base de datos');
+          location.reload();
+        })
+        .catch(error => {
+          console.error('Error al eliminar el producto de la base de datos', error);
+        });
     }
+    
 
-        axios.put('https://francocir.pythonanywhere.com/productos', this.productos)
-          .then(response => {
-            console.log('Producto eliminado de la base de datos');
-          })
-  }}
+
+
+}
 
 });
