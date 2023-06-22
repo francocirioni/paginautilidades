@@ -19,7 +19,7 @@ const app = new Vue({
 
       axios.post('https://francocir.pythonanywhere.com/productos', producto)
         .then(function () {
-          alert("Registro grabado");
+      
           window.location.href = "../index.html";
         })
         .catch(err => {

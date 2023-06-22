@@ -10,36 +10,45 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="container main">
-            <div class="row">
-                <div class="col-md-6 side-image imagen2">
-                    <!-------Image-------->
-                
-                  
-                    
-                </div>
-                <div class="col-md-6 right">
-                     <div class="input-box">
-                        <header>Create account</header>
-                        <div class="input-field">
-                            <input type="text" class="input" id="email" required autocomplete="off">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" class="input" id="password" required>
-                            <label for="password">Password</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="submit" class="submit" value="Sign Up">
-                            
-                        </div>
-                        <div class="signin">
-                            <span>Already have an account? <a href="#">Log in here</a></span>
-                        </div>
-                     </div>
-                </div>
+      <div class="container main">
+        <div class="row" v-for="(producto, index) in productos" :key="producto.name">
+          <div class="col-md-6 side-image imagen2"></div>
+          <div class="col-md-6 right">
+            <div class="input-box">
+              <header>Editar Programa</header>
+              <div class="input-field">
+                <input type="text" class="input" v-model="producto.form.nombre" required autocomplete="off">
+                <label for="nombre">Nombre</label>
+              </div>
+              <div class="input-field">
+                <input type="text" class="input" v-model="producto.form.descripcion" required autocomplete="off">
+                <label for="descripcion">Descripción</label>
+              </div>
+              <div class="input-field">
+                <input type="text" class="input" v-model="producto.form.icono" required autocomplete="off">
+                <label for="icono">URL del icono</label>
+              </div>
+              <div class="input-field">
+                <input type="text" class="input" v-model="producto.form.url" required autocomplete="off">
+                <label for="url">URL del producto</label>
+              </div>
+              <div class="input-field">
+                <input type="text" class="input" v-model="producto.form.version" required autocomplete="off">
+                <label for="version">Versión</label>
+              </div>
+              <div class="input-field">
+                <input type="submit" class="submit" value="Editar" @click.prevent="grabar(index)">
+                <input type="button" class="submit" id="cancelar" value="Volver al home" onclick="window.location.href='../index.html'">
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="edito.js"></script>
 </body>
 </html>

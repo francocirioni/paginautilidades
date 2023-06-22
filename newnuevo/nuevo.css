@@ -129,6 +129,9 @@ span a:hover{
 .imagen2{
     background-image: url(images/2.png);
 }
+#cancelar{
+    margin-top: 3px;
+}
 
 @media only screen and (max-width: 768px){
     .side-image{

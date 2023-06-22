@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-6 right">
                         <div class="input-box">
-                            <header>Create account</header>
+                            <header>Nuevo Programa</header>
                             <div class="input-field">
                                 <input type="text" class="input" v-model="nombre" required autocomplete="off">
                                 <label for="nombre">Nombre</label>
@@ -44,11 +44,11 @@
                                 <label for="version">Versión</label>
                             </div>
                             <div class="input-field">
-                                <input type="submit" class="submit" value="Sign Up" @click="grabar">
+                                <input type="submit" class="submit" value="Crear " @click="grabar">
+                                <input type="button" class="submit" id="cancelar" value="Volver al home" onclick="window.location.href='../index.html'">
+
                             </div>
-                            <div class="signin">
-                                <span>Already have an account? <a href="#">Log in here</a></span>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
