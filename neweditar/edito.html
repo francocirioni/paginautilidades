@@ -1,54 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="edito.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <title>Editar Programa</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="edito.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <title>Editar Programa</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
-    <div class="wrapper">
-      <div class="container main">
-        <div class="row" v-for="(producto, index) in productos" :key="producto.name">
-          <div class="col-md-6 side-image imagen2"></div>
-          <div class="col-md-6 right">
-            <div class="input-box">
-              <header>Editar Programa</header>
-              <div class="input-field">
-                <input type="text" class="input" v-model="producto.form.nombre" required autocomplete="off">
-                <label for="nombre">Nombre</label>
-              </div>
-              <div class="input-field">
-                <input type="text" class="input" v-model="producto.form.descripcion" required autocomplete="off">
-                <label for="descripcion">Descripción</label>
-              </div>
-              <div class="input-field">
-                <input type="text" class="input" v-model="producto.form.icono" required autocomplete="off">
-                <label for="icono">URL del icono</label>
-              </div>
-              <div class="input-field">
-                <input type="text" class="input" v-model="producto.form.url" required autocomplete="off">
-                <label for="url">URL del producto</label>
-              </div>
-              <div class="input-field">
-                <input type="text" class="input" v-model="producto.form.version" required autocomplete="off">
-                <label for="version">Versión</label>
-              </div>
-              <div class="input-field">
-                <input type="submit" class="submit" value="Editar" @click.prevent="grabar(index)">
-                <input type="button" class="submit" id="cancelar" value="Volver al home" onclick="window.location.href='../index.html'">
-              </div>
+  <div class="wrapper">
+    <div class="container main">
+      <div class="row" v-for="(producto, index) in productos" :key="producto.name">
+        <div class="col-md-6 side-image imagen2"></div>
+        <div class="col-md-6 right">
+
+
+          <div id="app" class="input-box">
+            <header>Editar Programa</header>
+            <div id="resultado2"></div>
+            <div class="input-field">
+              <input type="text" class="input" v-model="nombre" required autocomplete="off">
+              <label for="nombre">Nombre</label>
+            </div>
+            <div class="input-field">
+              <input type="text" class="input" v-model="descripcion" required autocomplete="off">
+              <label for="descripcion">Descripción</label>
+            </div>      
+
+
+            <div class="input-field">
+              <input type="text" class="input" v-model="icono" required autocomplete="off">
+              <label for="icono">URL del icono</label>
+            </div>
+            <div class="input-field">
+              <input type="text" class="input" v-model="url" required autocomplete="off">
+              <label for="url">URL del producto</label>
+            </div>
+            <div class="input-field">
+              <input type="text" class="input" v-model="version" required autocomplete="off">
+              <label for="version">Versión</label>
+            </div>
+            <div class="input-field">
+              <input type="submit" class="submit" value="Editar" @click.prevent="updateProducto"        >
+              <input type="button" class="submit" id="cancelar" value="Volver al home"
+                onclick="window.location.href='../index.html'">
             </div>
           </div>
+
+
         </div>
       </div>
-        </div>
     </div>
+  </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="edito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="edito.js"></script>
 </body>
+
 </html>
+
+
+
+<script>
+
+
+  new Vue({
+    el: '#app',
+    data: {
+      nombre: '',
+      descripcion: '',
+      icono: '',
+      url: '',
+      version: ''
+    },
+    methods: {
+      updateProducto: function () {
+
+
+        var url = window.location.href;
+
+
+        var indiceIgual = url.indexOf("=");
+
+
+        var resultado2 = url.slice(indiceIgual + 1);
+
+        var divResultado2 = document.getElementById("resultado2");
+        divResultado2.textContent = resultado2;
+
+
+
+
+
+        var id = resultado2;
+        var url = 'https://francocir.pythonanywhere.com/productos/' + id;
+        var data = {
+          nombre: this.nombre,
+          descripcion: this.descripcion,
+          icono: this.icono,
+          url: this.url,
+          version: this.version
+        };
+
+        axios.put(url, data)
+          .then(function (response) {
+            console.log(response.data);
+
+            window.location.href = '../index.html';
+
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
+      }
+    }
+  });
+</script>
+
+</body>
+
+</html>
+
+
+<!--   onclick="window.location.href='../index.html'"     -->
