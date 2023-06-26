@@ -41,10 +41,23 @@
               <input type="text" class="input" v-model="url" required autocomplete="off">
               <label for="url">URL del producto</label>
             </div>
+            
             <div class="input-field">
-              <input type="text" class="input" v-model="version" required autocomplete="off">
               <label for="version">Versión</label>
+              <select id="version" class="input" v-model="version" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="10">10</option>
+              </select>
             </div>
+
+
+
+
             <div class="input-field">
               <input type="submit" class="submit" value="Editar" @click.prevent="updateProducto"        >
               <input type="button" class="submit" id="cancelar" value="Volver al home"
