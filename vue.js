@@ -13,12 +13,13 @@ new Vue({
       axios.get('https://francocir.pythonanywhere.com/productos')
         .then(response => {
           this.productos = Object.values(response.data);
+          this.ocultarTarjetasNoAudio();
         })
         .catch(error => {
           console.error(error);
         });
-    },
-
+    },    
+    
     eliminarProducto(id) {
       const url = 'https://francocir.pythonanywhere.com/productos/' + id;
       var options = {
@@ -35,6 +36,8 @@ new Vue({
           console.error('Error al eliminar el producto de la base de datos', error);
         });
     }
+
+
     
 
 
@@ -42,3 +45,4 @@ new Vue({
 }
 
 });
+

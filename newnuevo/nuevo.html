@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +12,15 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-   
+
 </head>
+
 <body>
     <div id="app">
         <div class="wrapper">
             <div class="container main">
                 <div class="row">
-                    <div class="col-md-6 side-image imagen2">                 
+                    <div class="col-md-6 side-image imagen2">
                     </div>
                     <div class="col-md-6 right">
                         <div class="input-box">
@@ -39,16 +41,27 @@
                                 <input type="text" class="input" v-model="url" required autocomplete="off">
                                 <label for="url">URL del producto</label>
                             </div>
+
                             <div class="input-field">
-                                <input type="text" class="input" v-model="version" required autocomplete="off">
-                                <label for="version">Versión</label>
+                                <label for="version">Tipo de programa</label>
+                                <select id="version" class="input" v-model="version" required>
+                                    <option value="1">antivirus</option>
+                                    <option value="2">analisis</option>
+                                    <option value="3">sistemas operativos</option>
+                                    <option value="4">ofimatica/option>
+                                    <option value="5">optimizador</option>
+                                    <option value="6">otros</option>
+
+                                </select>
                             </div>
+
                             <div class="input-field">
                                 <input type="submit" class="submit" value="Crear " @click="grabar">
-                                <input type="button" class="submit" id="cancelar" value="Volver al home" onclick="window.location.href='../index.html'">
+                                <input type="button" class="submit" id="cancelar" value="Volver al home"
+                                    onclick="window.location.href='../index.html'">
 
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -56,6 +69,7 @@
         </div>
     </div>
 </body>
+
 </html>
 
 <script src="nuevo.js"></script>

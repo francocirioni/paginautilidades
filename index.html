@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
 
 
 </head>
@@ -22,33 +23,40 @@
 
   <div class="header">
 
+    <div class="acceso">
+      <input class="inputdeadmin" type="password" id="inputContraseña" placeholder="Acceso Administrador" />
+      <button class="inputdeadminboton" id="btnIngresar">Ingresar</button>
+    </div>
+    
+
     <div class="tituloyboton">
 
-      <div class="titulo"> MI TITULO</div>
-      <div class="botonadmin"> <button>asdasds</button></div>
+      <span class="titulo">
+        <h1>MIS UTILIDADES</h1>
+      </span>
 
     </div>
 
     <div class="nav">
-
-    
-
-
-
+      <div class="todos t"><a>todos</a></div>
+      <div class="antivirus t"><a>antivirus</a></div>
+      <div class="analisis t">analisis</div>
+      <div class="sistop t">sistemas operativos</div>
+      <div class="ofimatica t">ofimatica</div>
+      <div class="optimizador t">optimizador</div>
+      <div class="otro t">otros</div>
+      <div class="audio t">audio</div>  
 
     </div>
-
-
 
   </div>
 
   <div class="contenedor" id="app">
 
-    <div class="card" v-for="producto in productos" :key="producto.nombre">
+    <div class="card" v-for="producto in productos" :key="producto.nombre" >
 
-      <div class="front">
+      <div class="front" >
 
-        
         <span class="vacio"> </span>
         <span class="contendoricono">
           <span class="icono">
@@ -63,30 +71,28 @@
         </span>
       </div>
 
-      <div class="back">
+      <div class="back" >
 
 
         <span class="barraback">
           <img class="icono2" :src="producto.icono" alt="">
-          <span class="contenedorbotones">
+
+          <span class="contenedorbotones" style="display: none;">
             <button class="botones" >
-
-              <a class="botones" :href="'neweditar/edito.html?id=' + producto.id">
-                  <img class="imagenboton" src="imagenes/lapiz.png">
-                </a></button>
-                
-
- 
-<button class="botones" @click="eliminarProducto(producto.id)">
-  <img class="imagenboton" src="imagenes/eliminar.png" alt="">
-</button>
+              <a class="botonesa" :href="'neweditar/edito.html?id=' + producto.id">
+                <img class="imagenboton" src="imagenes/lapiz.png">
+              </a></button>
+            <button class="botones" @click="eliminarProducto(producto.id)">
+              <img class="imagenboton" src="imagenes/eliminar.png" alt="">
+            </button>
 
           </span>
 
         </span>
         <span class="descripcion">
-          {{ producto.descripcion }}     
+          {{ producto.descripcion }}
           
+
         </span>
         <span class="contenedorboton">
           <a class="linkboton" v-bind:href="producto.url"><button class="lin">URL</button></span></a>
@@ -104,14 +110,32 @@
   </div>
 
 
+  <div class="footer">
 
+    <h4>Franco Cirioni - 2023 - Proyecto Codo a Codo</h2>
+
+
+  </div>
+
+<script src="vue.js"></script>
+<script src="admin.js"></script>
 
 </body>
 
 </html>
 
-
-
-<script src="vue.js"></script>
-
-
+<script>
+  const inputContraseña = document.getElementById("inputContraseña");
+  const botones = document.getElementsByClassName("contenedorbotones");
+  
+  document.getElementById("btnIngresar").addEventListener("click", function() {
+    const contraseña = inputContraseña.value;
+  
+    if (contraseña === "admin") {
+      for (let i = 0; i < botones.length; i++) {
+        botones[i].style.display = "block";
+      }
+    }
+  });
+  </script>
+  

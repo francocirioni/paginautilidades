@@ -24,6 +24,7 @@ body {
     overflow: hidden;
     border-radius: 0.3rem;
     color: black;
+    
 }
 
 .card div {
@@ -77,6 +78,7 @@ body {
 
 
 .contendoricono {
+   
 
     width: 100%;
     display: flex;
@@ -176,6 +178,9 @@ body {
     align-items: center;
     justify-content: right;
     border: transparent;
+  
+    padding-left: 4rem;
+    
 
 
 
@@ -188,14 +193,18 @@ body {
 .botones {
 
     height: 50%;
-    width: 25%;
+    width: 40%;
     transition: all 0.5s ease;
     border-radius: 4%;
     background-color: transparent;
-    border: none;
-
-    margin-right: 8%;
-
+    border: none;      
+    align-items: right;
+    justify-content: right;
+    margin-top: 20px;
+   
+    
+    
+ 
 }
 
 .botones:hover {
@@ -320,18 +329,93 @@ background: rgba(37, 95, 156,0.9);
 
     width: 100%;
     height: 8rem;
-    border: 1px solid red;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    
 }
+
+.titulo{
+    font-size: 2.3em;
+}
+
+
 
 
 .nav{
 
     width: 100%;
     height: 3rem;
-    border: 1px solid red;
+    border-top: 2px solid #B9D7EA;
+    border-bottom: 2px solid #B9D7EA; 
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+	
 }
 
+.t{
 
+    border-left: 2px solid #B9D7EA;
+    font-size: 1em;   
+    padding-left: 4px;
+    margin-left: 5px;
+    
+
+
+}
+
+.footer{
+
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    border-top: 2px solid #B9D7EA;
+    
+}
+.acceso{
+    height: 1rem;
+    width: 100%;  
+    text-align: right;
+    padding-right: 5px;
+}
+.inputdeadmin{
+    background-color: #B9D7EA;
+    color: black;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin-top: 2px;
+    
+}
+
+.inputdeadminboton{
+    background-color: #B9D7EA;
+    color: black;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin-top: 2px;
+    
+}
 
 /*
 
