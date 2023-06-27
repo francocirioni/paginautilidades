@@ -96,23 +96,11 @@
     },
     methods: {
       updateProducto: function () {
-
-
         var url = window.location.href;
-
-
         var indiceIgual = url.indexOf("=");
-
-
         var resultado2 = url.slice(indiceIgual + 1);
-
         var divResultado2 = document.getElementById("resultado2");
         divResultado2.textContent = resultado2;
-
-
-
-
-
         var id = resultado2;
         var url = 'https://francocir.pythonanywhere.com/productos/' + id;
         var data = {

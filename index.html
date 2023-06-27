@@ -14,10 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  
-
-
-</head>
+ </head>
 
 <body>
 
@@ -26,8 +23,7 @@
     <div class="acceso">
       <input class="inputdeadmin" type="password" id="inputContraseña" placeholder="Acceso Administrador" />
       <button class="inputdeadminboton" id="btnIngresar" onclick="cambiarBoton()">Ingresar</button>
-    </div>
-    
+    </div>   
 
     <div class="tituloyboton">
 
@@ -38,14 +34,14 @@
     </div>
 
     <div class="nav">
-      <div class="todos t"><a>todos</a></div>
-      <div class="antivirus t"><a>antivirus</a></div>
-      <div class="analisis t">analisis</div>
-      <div class="sistop t">sistemas operativos</div>
-      <div class="ofimatica t">ofimatica</div>
-      <div class="optimizador t">optimizador</div>
-      <div class="otro t">otros</div>
-      <div class="audio t">audio</div>  
+      <div class="todos t"><button class="botnav">todos</button></div>
+      <div class="antivirus t"><button class="botnav">antivirus</button></div>
+      <div class="analisis t"><button class="botnav">analisis</button></div>
+      <div class="sistop t"><button class="botnav">sistemas</button></div>
+      <div class="ofimatica t"><button class="botnav">ofimatica</button></div>
+      <div class="optimizador t"><button class="botnav">optimizador</button></div>
+      <div class="otro t"><button class="botnav">otro</button></div>
+      <div class="audio t"><button class="botnav">audio</button></div>  
 
     </div>
 
@@ -72,7 +68,6 @@
       </div>
 
       <div class="back" >
-
 
         <span class="barraback">
           <img class="icono2" :src="producto.icono" alt="">

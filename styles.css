@@ -369,6 +369,7 @@ background: rgba(37, 95, 156,0.9);
     border-left: 2px solid #B9D7EA;
     font-size: 1em;   
     padding-left: 4px;
+  
     
     
 
@@ -415,6 +416,25 @@ background: rgba(37, 95, 156,0.9);
     padding: 2px;
     margin-top: 2px;
     
+}
+
+.botnav{
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;  
+    transition: 0.1s;
+    
+
+}
+
+.botnav:hover{
+
+    
+    padding: 10px;
+    font-size: 1.3em;
+
 }
 
 /*
