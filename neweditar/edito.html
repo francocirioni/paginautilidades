@@ -43,16 +43,17 @@
             </div>
             
             <div class="input-field">
-              <label for="version">Tipo de programa</label>
+              <label for="version"></label>
               <select id="version" class="input" v-model="version" required>
-                <option value="1">antivirus</option>
-                <option value="2">analisis</option>
-                <option value="3">sistemas operativos</option>
-                <option value="4">ofimatica/option>
-                <option value="5">optimizador</option>
-                <option value="6">otros</option>
-           
-              </select>
+                <option value="" disabled selected hidden>Tipo de programa</option>
+                <option value="antivirus">antivirus</option>
+                <option value="analisis">analisis</option>
+                <option value="sistemas operativos">sistemas operativos</option>
+                <option value="ofimatica">ofimatica</option>
+                <option value="optimizador">optimizador</option>
+                <option value="otros">otros</option>
+
+            </select>
             </div>
 
 
