@@ -21,18 +21,20 @@
   <div class="header">
 
     <div class="acceso">
-      <input class="inputdeadmin" type="password" id="inputContraseña" placeholder="Acceso Administrador" />
-      <button class="inputdeadminboton" id="btnIngresar" onclick="cambiarBoton()">Ingresar</button>
+   
+      <button class="inputdeadminboton" id="btnIngresar" onclick="redireccionar()">Volver a vista cliente</button>
+
     </div>   
 
     <div class="tituloyboton">
 
       <span class="titulo">
-        <h1>MIS UTILIDADES</h1>
+        <h1>Administrador</h1>
       </span>
 
     </div>
-<!--
+
+    <!--
     <div class="nav">
       <div class="todos t"><button class="botnav">todos</button></div>
       <div class="antivirus t"><button class="botnav">antivirus</button></div>
@@ -43,7 +45,9 @@
       <div class="otro t"><button class="botnav">otro</button></div>
       <div class="audio t"><button class="botnav">audio</button></div>  
 
-    </div>-->
+    </div>
+
+    -->
 
   </div>
 
@@ -72,7 +76,7 @@
         <span class="barraback">
           <img class="icono2" :src="producto.icono" alt="">
 
-          <span class="contenedorbotones" style="display: none;">
+          <span class="contenedorbotones">
             <button class="botones" >
               <a class="botonesa" :href="'neweditar/edito.html?id=' + producto.id">
                 <img class="imagenboton" src="imagenes/lapiz.png">
@@ -98,6 +102,12 @@
 
   </div>
 
+  <div class="crearnuevo">
+    <a class="imagendesuma" href="newnuevo/nuevo.html">
+      <img src="imagenes/suma.png" alt="">
+    </a>
+  </div>
+
 
   <div class="footer">
 
@@ -114,19 +124,11 @@
 </html>
 
 <script>
-  const inputContraseña = document.getElementById("inputContraseña");
-  const botones = document.getElementsByClassName("contenedorbotones");
-  
-  document.getElementById("btnIngresar").addEventListener("click", function() {
-    const contraseña = inputContraseña.value;
-  
-    if (contraseña === "admin") {
 
-        window.location.href = "index2.html";
-      
-    }else { window.alert("contraseña incorrecta");}
-   
-  });
+  function redireccionar() {
+    window.location.href = 'index.html';
+  }
+
 
 
     
