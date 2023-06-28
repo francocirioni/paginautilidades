@@ -27,7 +27,7 @@ new Vue({
       };
     
       fetch(url, options)
-        .then(res => res.text()) // o res.json()
+        .then(res => res.text()) 
         .then(res => {
           console.log('Producto eliminado de la base de datos');
           location.reload();
