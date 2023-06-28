@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    background: #769FCD;
+}
+
+.contenedor {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 25rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-auto-flow: dense;
+
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.3rem;
+    color: black;
+    
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    backface-visibility: hidden;
+    transition: 0.3s;
+}
+
+.card .front {
+    background-color: #B9D7EA;
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.card .frontb {
+    background-color: #B9D7EA;
+
+}
+
+
+#formulario {
+    margin-top: 5%;
+}
+
+.card .back {
+    background: #D6E6F2;
+    transform: perspective(500px) rotateY(180deg);
+}
+
+
+.card:hover .front {
+
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .back {
+
+    transform: perspective(500px) rotateY(360deg);
+}
+
+
+
+
+
+
+
+
+.contendoricono {
+   
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+
+
+}
+
+
+.icono {
+    width: 10rem;
+    background-color: rgba(0, 0, 0, 0.144);
+    border: 5px solid #D6E6F2;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.iconob {
+    width: 10rem;
+    background-color: rgba(0, 0, 0, 0.144);
+    border: 5px solid #D6E6F2;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.iconob:hover {
+    background: #769FCD;
+}
+
+
+.nombre {
+    color: red;
+    font-weight: bold;
+}
+
+.barraback {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+
+}
+
+.icono2 {
+
+    height: 60%;
+    margin-left: 5%;
+
+}
+
+.nombre2 {
+    font-size: 30px;
+}
+
+.descripcion {
+
+    height: 60%;
+    border: 2px solid#85b4eb;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+
+
+.contenedorboton {
+
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.contenedorbotones {
+
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border: transparent;
+  
+    padding-left: 4rem;
+    
+
+
+
+
+
+}
+
+
+
+.botones {
+
+    height: 50%;
+    width: 40%;
+    transition: all 0.5s ease;
+    border-radius: 4%;
+    background-color: transparent;
+    border: none;      
+    align-items: right;
+    justify-content: right;
+    margin-top: 20px;
+   
+    
+    
+ 
+}
+
+.botones:hover {
+    background: #769FCD;
+
+}
+
+.imagenboton {
+    width: 50%;
+}
+
+
+
+
+
+
+
+.vacio {
+    height: 20%;
+}
+
+.nombre {
+    height: 20%;
+}
+
+.version {
+    height: 10%;
+}
+
+.linkboton {
+
+    width: 90%;
+    padding: 5%;
+    background-color: #B9D7EA;
+}
+
+.linkboton:hover {
+    background: #769FCD;
+
+}
+
+.contedorblanco {
+    height: 50%;
+}
+
+.contendoriconosuma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B9D7EA;
+    border: 1px solid red;
+
+}
+
+.buttonb {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.suma {
+    margin: 4%;
+}
+
+.lin {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.crearnuevo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    width: 9rem;
+    height: 9rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    transition: .2s;
+}
+
+
+.crearnuevo:hover{
+background: rgba(37, 95, 156,0.9);
+    color: #fff;
+    
+}
+
+.submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #ececec;
+    border-radius: 5px;
+    
+}
+.submit:hover{
+    
+}
+
+
+
+
+.imagendesuma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.iconotitulo{
+
+    width: 2.0em;
+
+}
+.tituloyboton{
+
+    width: 100%;
+    height: 15rem;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    
+}
+
+.titulo{
+    font-size: 2.3em;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.nav{
+
+    width: 100%;
+    height: 3rem;
+    border-top: 2px solid #B9D7EA;
+    border-bottom: 2px solid #B9D7EA; 
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+	
+}
+
+.t{
+
+    border-left: 2px solid #B9D7EA;
+    font-size: 1em;   
+    padding-left: 4px;
+  
+    
+    
+
+
+}
+
+.footer{
+
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    border-top: 2px solid #B9D7EA;
+    
+}
+.acceso{
+    height: 1rem;
+    width: 100%;  
+    text-align: right;
+    padding-right: 5px;
+}
+.inputdeadmin{
+    background-color: #B9D7EA;
+    color: black;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin-top: 2px;
+    
+}
+
+.inputdeadminboton{
+    background-color: #B9D7EA;
+    color: black;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin-top: 2px;
+    
+}
+
+.botnav{
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;  
+    transition: 0.1s;
+    
+
+}
+
+.botnav:hover{
+
+    
+    padding: 10px;
+    font-size: 1.3em;
+
+}
+
+
+@media (max-width: 650px) {
+
+
+    
+}
