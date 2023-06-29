@@ -20,7 +20,7 @@ const app = new Vue({
       axios.post('https://francocir.pythonanywhere.com/productos', producto)
         .then(function () {
       
-          window.location.href = "../index.html";
+          window.location.href = "../index2.html";
         })
         .catch(err => {
           console.error(err);

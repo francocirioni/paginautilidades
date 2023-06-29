@@ -52,7 +52,7 @@
             <div class="input-field">
               <input type="submit" class="submit" value="Editar" @click.prevent="updateProducto">
               <input type="button" class="submit" id="cancelar" value="Volver al home"
-                onclick="window.location.href='../index.html'">
+                onclick="window.location.href='../index2.html'">
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@
             .then(function (response) {
               console.log(response.data);
 
-              window.location.href = '../index.html';
+              window.location.href = '../index2.html';
 
             })
             .catch(function (error) {

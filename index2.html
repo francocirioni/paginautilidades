@@ -14,92 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
- </head>
+</head>
 
 <body>
-
   <div class="header">
-
     <div class="acceso">
-   
       <button class="inputdeadminboton" id="btnIngresar" onclick="redireccionar()">Volver a vista cliente</button>
-
-    </div>   
+    </div>
 
     <div class="tituloyboton">
-
       <span class="titulo">
         <h1>Administrador</h1>
       </span>
-
     </div>
 
-    <!--
     <div class="nav">
-      <div class="todos t"><button class="botnav">todos</button></div>
-      <div class="antivirus t"><button class="botnav">antivirus</button></div>
-      <div class="analisis t"><button class="botnav">analisis</button></div>
-      <div class="sistop t"><button class="botnav">sistemas</button></div>
-      <div class="ofimatica t"><button class="botnav">ofimatica</button></div>
-      <div class="optimizador t"><button class="botnav">optimizador</button></div>
-      <div class="otro t"><button class="botnav">otro</button></div>
-      <div class="audio t"><button class="botnav">audio</button></div>  
+      <div class="todos t "><button class="botnav" id="todos-btn">todos</button></div>
+      <div class="antivirus t"><button class="botnav filtro-btn" data-categoria="antivirus">Antivirus</button></div>
+      <div class="analisis t"><button class="botnav filtro-btn" data-categoria="analisis">Analisis</button></div>
+      <div class="sistop t"><button class="botnav filtro-btn" data-categoria="sistemas">Sistemas</button></div>
+      <div class="ofimatica t"><button class="botnav filtro-btn" data-categoria="ofimatica">Ofimatica</button></div>
+      <div class="optimizador t"><button class="botnav filtro-btn" data-categoria="optimizador">Optimizador</button></div>
+      <div class="otro t"><button class="botnav filtro-btn" data-categoria="otro">Otro</button></div>
+      <div class="audio t"><button class="botnav filtro-btn" data-categoria="audio">Audio</button></div>
 
     </div>
 
-    -->
 
   </div>
 
-  <div class="contenedor" id="app">
-
-    <div class="card" v-for="producto in productos" :key="producto.nombre" >
-
-      <div class="front" >
-
-        <span class="vacio"> </span>
-        <span class="contendoricono">
-          <span class="icono">
-            <img :src="producto.icono" alt="">
-          </span>
-        </span>
-        <span class="nombre">
-          <p> {{ producto.nombre }}</p>
-        </span>
-        <span class="version">
-          <p> {{ producto.version }} <span style="display: none;">{{ producto.id }} </span></p>
-        </span>
-      </div>
-
-      <div class="back" >
-
-        <span class="barraback">
-          <img class="icono2" :src="producto.icono" alt="">
-
-          <span class="contenedorbotones">
-            <button class="botones" >
-              <a class="botonesa" :href="'neweditar/edito.html?id=' + producto.id">
-                <img class="imagenboton" src="imagenes/lapiz.png">
-              </a></button>
-            <button class="botones" @click="eliminarProducto(producto.id)">
-              <img class="imagenboton" src="imagenes/eliminar.png" alt="">
-            </button>
-
-          </span>
-
-        </span>
-        <span class="descripcion">
-          {{ producto.descripcion }}
-          
-
-        </span>
-        <span class="contenedorboton">
-          <a class="linkboton" v-bind:href="producto.url"><button class="lin">URL</button></span></a>
-      </div>
-
-
-    </div>
-
+  <div id="productos-container" class="contenedor" id="app">
   </div>
 
   <div class="crearnuevo">
@@ -108,16 +52,18 @@
     </a>
   </div>
 
-
   <div class="footer">
-
     <h4>Franco Cirioni - 2023 - Proyecto Codo a Codo</h2>
-
-
   </div>
 
-<script src="vue.js"></script>
-<script src="admin.js"></script>
+
+  <script src="admin.js"></script>
+  <script src="filtro2.js"></script>
+  <script src="eliminar.js"></script>
+
+
+
+
 
 </body>
 
@@ -125,11 +71,6 @@
 
 <script>
 
-  function redireccionar() {
-    window.location.href = 'index.html';
-  }
+ 
 
-
-
-    
-  </script>
+</script>
