@@ -24,8 +24,7 @@ function obtenerProductos(categoria) {
   }
   
   function mostrarProductos(productos) {
-    const productosContainer = document.getElementById('productos-container');
-  
+    const productosContainer = document.getElementById('productos-container');  
     productosContainer.innerHTML = '';
   
     productos.forEach(producto => {
@@ -33,6 +32,7 @@ function obtenerProductos(categoria) {
       productoElement.classList.add('card');
       productoElement.setAttribute('v-for', 'producto in productos');
       productoElement.setAttribute(':key', 'producto.nombre');
+      productoElement.setAttribute('data-aos', '"fade-right"');
      
       
 
@@ -43,7 +43,7 @@ function obtenerProductos(categoria) {
         <span class="vacio"></span>
         <span class="contendoricono">
           <span class="icono">
-            <img src="${producto.icono}" alt="">
+            <img  class="imagendentrodeicono" src="${producto.icono}" alt="">
           </span>
         </span>
         <span class="nombre">
@@ -79,8 +79,7 @@ function obtenerProductos(categoria) {
       `;
   
       productoElement.appendChild(frontElement);
-      productoElement.appendChild(backElement);
-  
+      productoElement.appendChild(backElement);  
       productosContainer.appendChild(productoElement);
     });
   }

@@ -85,12 +85,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 50%;
+    
 
 
 }
 
 
 .icono {
+    
     width: 10rem;
     background-color: rgba(0, 0, 0, 0.144);
     border: 5px solid #D6E6F2;
@@ -120,7 +122,7 @@ body {
 
 
 .nombre {
-    color: red;
+    color: #FC6220;
     font-weight: bold;
 }
 
@@ -177,9 +179,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: right;
-    border: transparent;
-  
+    border: transparent;  
     padding-left: 4rem;
+    padding-right: 5%;
     
 
 
@@ -193,15 +195,15 @@ body {
 .botones {
 
     height: 50%;
-    width: 40%;
+    width: 50%;
     transition: all 0.5s ease;
     border-radius: 4%;
     background-color: transparent;
     border: none;      
     align-items: right;
     justify-content: right;
-    margin-top: 20px;
-   
+    margin-top: 0px;
+
     
     
  
@@ -255,7 +257,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #B9D7EA;
-    border: 1px solid red;
+   
 
 }
 
@@ -332,22 +334,32 @@ background: rgba(37, 95, 156,0.9);
 .tituloyboton{
 
     width: 100%;
-    height: 12rem;
+    height: 9rem;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+  
+   
     
 }
 
 .titulo{
-    font-size: 2.3em;
+
+    font-size: 2.7em;
     display: flex;
     align-items: center;
+    font-weight: bold;
+
+    
 }
 
+.imagendelogo{
+    width: 5rem;
+
+}
 
 
 
@@ -372,8 +384,9 @@ background: rgba(37, 95, 156,0.9);
 .t{
 
     border-left: 2px solid #B9D7EA;
-    font-size: 1em;   
+    font-size: 1.2em;   
     padding-left: 4px;
+    font-weight: bold;
   
     
     
@@ -393,6 +406,7 @@ background: rgba(37, 95, 156,0.9);
 	align-items: center;
 	align-content: center;
     border-top: 2px solid #B9D7EA;
+    padding-bottom: 10px;
     
 }
 .acceso{
@@ -407,7 +421,7 @@ background: rgba(37, 95, 156,0.9);
     outline: none;
     border: none;
     text-align: center;
-    padding: 2px;
+    padding: 5px;
     margin-top: 2px;
     
 }
@@ -418,8 +432,26 @@ background: rgba(37, 95, 156,0.9);
     outline: none;
     border: none;
     text-align: center;
-    padding: 2px;
-    margin-top: 2px;
+    border-radius: 5px;
+    padding: 4px;
+    font-weight: bold;
+   
+    
+    
+    
+}
+
+.inputdeadminboton:hover{
+    background-color: #546774;
+    color: black;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 4px;
+    font-weight: bold;
+  
+    
+    
     
 }
 
@@ -439,8 +471,18 @@ background: rgba(37, 95, 156,0.9);
     
     padding: 10px;
     font-size: 1.3em;
+    color:#FC6220;
 
 }
+
+
+.imagendentrodeicono{
+
+    max-width: 100%;
+}
+
+
+
 
 
 @media (max-width: 650px) {

@@ -2,6 +2,10 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    background: #769FCD; ;
+}
 .wrapper{
     background: #769FCD;
     padding: 0 20px 0 20px;

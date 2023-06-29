@@ -33,6 +33,7 @@
       productoElement.classList.add('card');
       productoElement.setAttribute('v-for', 'producto in productos');
       productoElement.setAttribute(':key', 'producto.nombre');
+      productoElement.setAttribute('data-aos', '"fade-right"');
      
       
 
@@ -43,7 +44,7 @@
         <span class="vacio"></span>
         <span class="contendoricono">
           <span class="icono">
-            <img src="${producto.icono}" alt="">
+            <img class="imagendentrodeicono" src="${producto.icono}" alt="">
           </span>
         </span>
         <span class="nombre">

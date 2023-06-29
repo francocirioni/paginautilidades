@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documenst</title>
+  <title>Mis Utilidades ADMINISTRADOR</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,21 +14,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="icon" href="imagenes/technical-support_icon-icons.com_52812.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-aos="fade-right">
   <div class="header">
  
 
     <div class="tituloyboton">
       <span class="titulo">
+        <span><img class="imagendelogo" src="imagenes/technical-support_icon-icons.com_52812.png" alt=""></span>
         <h1>Administrador</h1>
       </span>
     </div>
 
-    <div class="nav">
+    <div class="nav" data-aos="fade-right">
       <div class="todos t "><button class="botnav" id="todos-btn">todos</button></div>
-      <div class="antivirus t"><button class="botnav filtro-btn" data-categoria="antivirus">Antivirus</button></div>
+      <div class="antivirus t"><button class="botnav filtro-btn" data-categoria="antivirus" >Antivirus</button></div>
       <div class="analisis t"><button class="botnav filtro-btn" data-categoria="analisis">Analisis</button></div>
       <div class="sistop t"><button class="botnav filtro-btn" data-categoria="sistemas">Sistemas</button></div>
       <div class="ofimatica t"><button class="botnav filtro-btn" data-categoria="ofimatica">Ofimatica</button></div>
@@ -70,8 +73,11 @@
 
 </html>
 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-
- 
-
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
 </script>

@@ -10,9 +10,10 @@
   <title>Editar Programa</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body  data-aos="fade-left">
   <div class="wrapper">
     <div class="container main">
       <div class="row" v-for="(producto, index) in productos" :key="producto.name">
@@ -20,7 +21,7 @@
         <div class="col-md-6 right">
           <div id="app" class="input-box">
             <header>Editar Programa</header>
-            <div id="resultado2"></div>
+            <div id="resultado2" style="display: none;"></div>
             <div class="input-field">
               <input type="text" class="input" v-model="nombre" required autocomplete="off">
               <label for="nombre">Nombre</label>
@@ -129,3 +130,12 @@
 </body>
 
 </html>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
