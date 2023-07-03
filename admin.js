@@ -4,7 +4,6 @@ function redireccionar() {
 
 
   const inputContraseña = document.getElementById("inputContraseña");
-  const botones = document.getElementsByClassName("contenedorbotones");
   
   document.getElementById("btnIngresar").addEventListener("click", function() {
     const contraseña = inputContraseña.value;

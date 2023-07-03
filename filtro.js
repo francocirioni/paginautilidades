@@ -1,4 +1,3 @@
-
     function obtenerProductos(categoria) {
     axios.get('https://francocir.pythonanywhere.com/productos')
       .then(response => {
@@ -86,10 +85,9 @@
     });
   }
   
-  // Obtener y mostrar todos los productos al cargar la página
+
   obtenerProductos(null);
   
-  // Agregar event listeners a los botones de filtro
   const filtroButtons = document.querySelectorAll('.filtro-btn');
   filtroButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -97,12 +95,39 @@
       obtenerProductos(categoria);
     });
   });
-  
-  // Agregar event listener al botón "Mostrar todos"
+
   const todosBtn = document.getElementById('todos-btn');
   todosBtn.addEventListener('click', function() {
     obtenerProductos(null);
   });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   function eliminarProducto(id) {

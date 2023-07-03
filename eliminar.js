@@ -7,11 +7,11 @@ function eliminarProducto(id) {
     fetch(url, options)
       .then(res => res.text()) 
       .then(res => {
-        console.log('Producto eliminado de la base de datos');
+        console.log('Producto eliminado');
         location.reload();
       })
       .catch(error => {
-        console.error('Error al eliminar el producto de la base de datos', error);
+        console.error('Error', error);
       });
   }
   

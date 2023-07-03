@@ -13,9 +13,9 @@ function obtenerProductos(categoria) {
             }
             return false;
           });
-          mostrarProductos(productosFiltrados);
+          mostrarProductos(productosFiltrados); //muestra solo los filtrados y los pasa a la funcion mostrar prod
         } else {
-          mostrarProductos(productos);
+          mostrarProductos(productos); //si ningun campo tiene la categoria
         }
       })
       .catch(error => {
@@ -23,6 +23,9 @@ function obtenerProductos(categoria) {
       });
   }
   
+
+
+
   function mostrarProductos(productos) {
     const productosContainer = document.getElementById('productos-container');  
     productosContainer.innerHTML = '';
@@ -84,11 +87,11 @@ function obtenerProductos(categoria) {
     });
   }
   
-  // Obtener y mostrar todos los productos al cargar la página
-  obtenerProductos(null);
+ 
+  obtenerProductos(null);   //mostrar prodcutos al cargar la pagina, null muesta todos
   
-  // Agregar event listeners a los botones de filtro
-  const filtroButtons = document.querySelectorAll('.filtro-btn');
+
+  const filtroButtons = document.querySelectorAll('.filtro-btn'); //funciones de los iconos de filtro
   filtroButtons.forEach(button => {
     button.addEventListener('click', function() {
       const categoria = this.getAttribute('data-categoria');
@@ -96,11 +99,40 @@ function obtenerProductos(categoria) {
     });
   });
   
-  // Agregar event listener al botón "Mostrar todos"
+
   const todosBtn = document.getElementById('todos-btn');
   todosBtn.addEventListener('click', function() {
     obtenerProductos(null);
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
   
   function eliminarProducto(id) {

@@ -24,7 +24,7 @@ const app = new Vue({
         })
         .catch(err => {
           console.error(err);
-          alert("Error al Grabar");
+          alert("No se creo nuevo");
         });
     }
   }
